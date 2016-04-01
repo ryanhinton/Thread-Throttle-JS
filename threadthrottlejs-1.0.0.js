@@ -1,3 +1,4 @@
+/* ThreadThrottleJS v1.00 | (c) 2016 Hinton & Company | https://github.com/Drumsticks/ThreadThrottleJS/blob/master/LICENSE */
 function init_ThreadThrottleJS() {
     // Instantiate Objects
     ttjs  = new ThreadThrottleJS(thread);
@@ -89,5 +90,5 @@ function ThreadThrottleJS(callback) {
 }
 
 function thread(thisRow) {
-    setTimeout(threadThrottle.getFunctionName(), 1);
+    ttjs.getFunctionName()();
 }
