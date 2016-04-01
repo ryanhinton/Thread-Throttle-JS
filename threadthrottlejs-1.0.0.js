@@ -1,4 +1,4 @@
-/* ThreadThrottleJS v1.00 | (c) 2016 Hinton & Company | https://github.com/Drumsticks/ThreadThrottleJS/blob/master/LICENSE */
+/* ThreadThrottleJS v1.00 | (c) 2016 Hinton & Company, Inc. | https://github.com/Drumsticks/ThreadThrottleJS/blob/master/LICENSE */
 function init_ThreadThrottleJS() {
     // Instantiate Objects
     ttjs  = new ThreadThrottleJS(thread);
