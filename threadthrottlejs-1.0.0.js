@@ -1,5 +1,5 @@
-/* ThreadThrottleJS v1.00 | (c) 2016 Hinton & Company, Inc. | https://github.com/Drumsticks/ThreadThrottleJS/blob/master/LICENSE */
-function init_ThreadThrottleJS() {
+/*! ThreadThrottleJS v1.00 | (c) 2016 Hinton & Company | https://github.com/Drumsticks/ThreadThrottleJS/blob/master/LICENSE */
+function initThreadThrottleJS() {
     // Instantiate Objects
     ttjs  = new ThreadThrottleJS(thread);
 }
@@ -10,7 +10,8 @@ function ThreadThrottleJS(callback) {
         processesCompleted = 0,
         queueTotal = 0,
         initialQueueTotal = 0,
-        functionName = '';
+        functionName = '',
+        data = [];
     
     this.reset = function() {
         processesCompleted = 0;
@@ -87,8 +88,14 @@ function ThreadThrottleJS(callback) {
     this.getFunctionName = function() {
         return functionName;
     }
+    this.setData = function(o) {
+        data.push(o);
+    }
+    this.getData = function() {
+        return data.shift();
+    }
 }
 
-function thread(thisRow) {
-    ttjs.getFunctionName()();
+function thread() {
+    ttjs.getFunctionName()(ttjs.getData());
 }
