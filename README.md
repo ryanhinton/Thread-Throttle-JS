@@ -11,19 +11,24 @@ As one function finishes executing, the next function in the queue takes its pla
 The number of simultaneous executions remain at 2 at a time until all 10 functions have been executed.
 
 Simply initiate the following code to start the process:
+initThreadThrottleJS();
 
-threadThrottle = threadThrottle.threadThrottle(thread);
-threadThrottle.setFunctionName(simulatedSuccessResponse);
-threadThrottle.setLimit(2);
-threadThrottle.setQueue(5);
-threadThrottle.start();
+ttjs.setFunctionName(simulatedSuccessResponse);
+ttjs.setLimit(2);
+ttjs.setQueue(5);
+ttjs.setData({counter:1});
+ttjs.setData({counter:2});
+ttjs.setData({counter:3});
+ttjs.setData({counter:4});
+ttjs.setData({counter:5});
+ttjs.start();
 
 function YourFunction() {
     ...
     Your Code
     ...
     
-    threadThrottle.complete();
+    ttjs.complete();
 
     return ...
 }
