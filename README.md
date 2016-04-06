@@ -29,17 +29,19 @@ function YourFunction() {
 
 DEFINITIONS:
 --------- 
-threadThrottle = threadThrottle(thread); - Initiate and instantiate the threadThrottle object.
+initThreadThrottleJS(); - Initiate and instantiate the threadThrottle object.  The available object name is ttjs.
 
-threadThrottle.setFunctionName(YourFunction) - Set the name of your function. Please note that there are no quotes around your function name.
+ttjs.setFunctionName(YourFunction) - Set the name of your function. Please note that there are no quotes around your function name.
 
-threadThrottle.setLimit(n) - Set the throttle limit to a number (n) of simultaneous threads to be executed at a time.
+ttjs.setLimit(n) - Set the throttle limit to a number (n) of simultaneous threads to be executed at a time.
 
-threadThrottle.setQueue(n) - Set the Queue to a number (n) of functions to be executed.
+ttjs.setQueue(n) - Set the Queue to a number (n) of functions to be executed.
 
-threadThrottle.start() - Start the execution process! This only needs to be fired once to begin the entire process.
+ttjs.setData(o) - Set the data for each queue iteration while executing.
 
-threadThrottle.complete() - Once your function has completed, at the bottom of your function, tell threadThrottle that the process has completed.
+ttjs.start() - Start the execution process! This only needs to be fired once to begin the entire process.
+
+ttjs.complete() - At the bottom, within "Yourfunction", tell threadThrottle that the process has completed in order to move the process to the next item in the queue.
 
 ##############
 By Ryan Hinton
