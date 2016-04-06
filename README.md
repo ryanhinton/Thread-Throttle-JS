@@ -2,6 +2,7 @@
 Queues up multiple executions of a function and throttles a set amount of simultaneous executions.  
 =========
 Demo 1: http://plnkr.co/edit/hBrLJzVmCT7Mi45aIMl1?p=preview
+
 Demo 2: http://plnkr.co/edit/p3vUlC?p=preview
 
 For example: A function has been executed 10 times and the set throttle limit is 2.  
