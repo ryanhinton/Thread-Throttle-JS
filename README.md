@@ -5,7 +5,6 @@ This functinality will queue all of your functions that will be processed and th
 The purpose behind this functionality is to overcome server slowness and/or network slowness which can cause AJAX calls to time out if there are too many processes hitting the server at one time or if the network is slow.
 
 =========
-
 DEFINITIONS:
 --------- 
 `initThreadThrottleJS()` - Initiate and instantiate the threadThrottle object.  The available object name is ttjs.
@@ -23,8 +22,7 @@ DEFINITIONS:
 `complete()` - At the bottom, within "Yourfunction", tell threadThrottle that the process has completed in order to move the process to the next item in the queue.
 
 #Example
-=========
-For example: A function has been executed 10 times and the set throttle limit is 2.  
+A function has been executed 10 times and the set throttle limit is 2.  
 Therefore, only 2 out of the 10 functions queued to run can execute at a time.  
 The other 8 remain in a queue.  
 As one function finishes executing, the next function in the queue takes its place and gets executed.  
@@ -61,9 +59,7 @@ function YourFunction(data) {
 
     return true;
 }
-`
 #Demonstrations
-=========
 Demo 1: http://plnkr.co/edit/hBrLJzVmCT7Mi45aIMl1?p=preview
 
 Demo 2: http://plnkr.co/edit/p3vUlC?p=preview
