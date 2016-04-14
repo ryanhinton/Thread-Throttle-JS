@@ -8,19 +8,19 @@ The purpose behind this functionality is to overcome server slowness and/or netw
 
 DEFINITIONS:
 --------- 
-initThreadThrottleJS(); - Initiate and instantiate the threadThrottle object.  The available object name is ttjs.
+`initThreadThrottleJS()` - Initiate and instantiate the threadThrottle object.  The available object name is ttjs.
 
-ttjs.setFunctionName(YourFunction) - Set the name of your function. Please note that there are no quotes around your function name.
+`setFunctionName(YourFunction)` - Set the name of your function. Please note that there are no quotes around your function name.
 
-ttjs.setLimit(n) - Set the throttle limit to a number (n) of simultaneous threads to be executed at a time.
+`setLimit(n)` - Set the throttle limit to a number (n) of simultaneous threads to be executed at a time.
 
-ttjs.setQueue(n) - Set the Queue to a number (n) of functions to be executed.
+`setQueue(n)` - Set the Queue to a number (n) of functions to be executed.
 
-ttjs.setData(o) - Set the data for each queue iteration while executing.
+`setData(a)` - Set the data of any (a) type you choose for each queue iteration while executing.
 
-ttjs.start() - Start the execution process! This only needs to be fired once to begin the entire process.
+`start()` - Start the execution process! This only needs to be fired once to begin the entire process.
 
-ttjs.complete() - At the bottom, within "Yourfunction", tell threadThrottle that the process has completed in order to move the process to the next item in the queue.
+`complete()` - At the bottom, within "Yourfunction", tell threadThrottle that the process has completed in order to move the process to the next item in the queue.
 
 #Example
 =========
@@ -31,17 +31,24 @@ As one function finishes executing, the next function in the queue takes its pla
 The number of simultaneous executions remain at 2 at a time until all 10 functions have been executed.
 
 Simply initiate the following code to start the process:
-initThreadThrottleJS();
+`ttjs = initThreadThrottleJS();
 
 ttjs.setFunctionName(YourFunction);
 
 ttjs.setLimit(2);
+
 ttjs.setQueue(5);
+
 ttjs.setData({counter:1});
+
 ttjs.setData({counter:2});
+
 ttjs.setData({counter:3});
+
 ttjs.setData({counter:4});
+
 ttjs.setData({counter:5});
+
 ttjs.start();
 
 function YourFunction(data) {
@@ -53,7 +60,7 @@ function YourFunction(data) {
 
     return true;
 }
-
+`
 #Demonstrations
 =========
 Demo 1: http://plnkr.co/edit/hBrLJzVmCT7Mi45aIMl1?p=preview
