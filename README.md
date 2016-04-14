@@ -51,6 +51,6 @@ ttjs.start() - Start the execution process! This only needs to be fired once to 
 
 ttjs.complete() - At the bottom, within "Yourfunction", tell threadThrottle that the process has completed in order to move the process to the next item in the queue.
 
-##############
+=========
 By Ryan Hinton
 © Copyright 2016 
