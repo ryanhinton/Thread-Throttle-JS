@@ -1,39 +1,6 @@
 # Thread Throttle JS
-Queues up multiple executions of a function and throttles a set amount of simultaneous executions.  
 =========
-Demo 1: http://plnkr.co/edit/hBrLJzVmCT7Mi45aIMl1?p=preview
-
-Demo 2: http://plnkr.co/edit/p3vUlC?p=preview
-
-For example: A function has been executed 10 times and the set throttle limit is 2.  
-Therefore, only 2 out of the 10 functions queued to run can execute at a time.  
-The other 8 remain in a queue.  
-As one function finishes executing, the next function in the queue takes its place and gets executed.  
-The number of simultaneous executions remain at 2 at a time until all 10 functions have been executed.
-
-Simply initiate the following code to start the process:
-initThreadThrottleJS();
-
-ttjs.setFunctionName(simulatedSuccessResponse);
-
-ttjs.setLimit(2);
-ttjs.setQueue(5);
-ttjs.setData({counter:1});
-ttjs.setData({counter:2});
-ttjs.setData({counter:3});
-ttjs.setData({counter:4});
-ttjs.setData({counter:5});
-ttjs.start();
-
-function YourFunction() {
-    ...
-    Your Code
-    ...
-    
-    ttjs.complete();
-
-    return ...
-}
+Queues up multiple executions of a function and throttles a set amount of simultaneous executions.  
 
 DEFINITIONS:
 --------- 
@@ -50,6 +17,44 @@ ttjs.setData(o) - Set the data for each queue iteration while executing.
 ttjs.start() - Start the execution process! This only needs to be fired once to begin the entire process.
 
 ttjs.complete() - At the bottom, within "Yourfunction", tell threadThrottle that the process has completed in order to move the process to the next item in the queue.
+
+#Example
+=========
+For example: A function has been executed 10 times and the set throttle limit is 2.  
+Therefore, only 2 out of the 10 functions queued to run can execute at a time.  
+The other 8 remain in a queue.  
+As one function finishes executing, the next function in the queue takes its place and gets executed.  
+The number of simultaneous executions remain at 2 at a time until all 10 functions have been executed.
+
+Simply initiate the following code to start the process:
+initThreadThrottleJS();
+
+ttjs.setFunctionName(YourFunction);
+
+ttjs.setLimit(2);
+ttjs.setQueue(5);
+ttjs.setData({counter:1});
+ttjs.setData({counter:2});
+ttjs.setData({counter:3});
+ttjs.setData({counter:4});
+ttjs.setData({counter:5});
+ttjs.start();
+
+function YourFunction(data) {
+    
+    // This Example that would be replaced with your code, except leave ttjs.complete() in tact.
+    console.log('Function #' + counter);
+    
+    ttjs.complete();
+
+    return true;
+}
+
+#Demonstrations
+=========
+Demo 1: http://plnkr.co/edit/hBrLJzVmCT7Mi45aIMl1?p=preview
+
+Demo 2: http://plnkr.co/edit/p3vUlC?p=preview
 
 =========
 By Ryan Hinton
