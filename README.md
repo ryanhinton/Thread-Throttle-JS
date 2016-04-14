@@ -55,7 +55,7 @@ ttjs.start();
 function YourFunction(data) {
     
     // This Example that would be replaced with your code, except leave ttjs.complete() in tact.
-    console.log('Function #' + counter);
+    console.log('Function #' + data.counter);
     
     ttjs.complete();
 
