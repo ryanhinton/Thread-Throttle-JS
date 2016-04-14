@@ -4,7 +4,6 @@ This functinality will queue all of your functions that will be processed and th
 
 The purpose behind this functionality is to overcome server slowness and/or network slowness which can cause AJAX calls to time out if there are too many processes hitting the server at one time or if the network is slow.
 
-=========
 DEFINITIONS:
 --------- 
 `initThreadThrottleJS()` - Initiate and instantiate the threadThrottle object.  The available object name is ttjs.
