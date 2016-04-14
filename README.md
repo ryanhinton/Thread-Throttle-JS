@@ -15,6 +15,7 @@ Simply initiate the following code to start the process:
 initThreadThrottleJS();
 
 ttjs.setFunctionName(simulatedSuccessResponse);
+
 ttjs.setLimit(2);
 ttjs.setQueue(5);
 ttjs.setData({counter:1});
