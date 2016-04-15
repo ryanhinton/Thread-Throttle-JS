@@ -28,8 +28,9 @@ As one function finishes executing, the next function in the queue takes its pla
 The number of simultaneous executions remain at 2 at a time until all 10 functions have been executed.
 
 Simply initiate the following code to start the process:
-`
-ttjs = initThreadThrottleJS();
+
+
+`ttjs = initThreadThrottleJS();
 
 ttjs.setFunctionName(YourFunction);
 
