@@ -1,4 +1,4 @@
-# Thread Throttle JS
+# ThreadThrottleJS
 
 This functinality will queue all of your functions that will be processed and then throttle your predetermined number of simultaneous function calls to be executed from the queue.
 
