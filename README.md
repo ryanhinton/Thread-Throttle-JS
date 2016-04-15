@@ -64,7 +64,7 @@ Demo 1: http://plnkr.co/edit/hBrLJzVmCT7Mi45aIMl1?p=preview
 Demo 2: http://plnkr.co/edit/p3vUlC?p=preview
 
 #Keywords
-Javascript Thread Throttle JS asynchronous async 
+Javascript Thread Throttle JS Asynchronous Async Delay Workers Limiter Limit Funnel
 
 =========
 By Ryan Hinton
