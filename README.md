@@ -29,8 +29,7 @@ The number of simultaneous executions remain at 2 at a time until all 10 functio
 
 Simply initiate the following code to start the process:
 
-
-`ttjs = initThreadThrottleJS();
+ttjs = initThreadThrottleJS();
 
 ttjs.setFunctionName(YourFunction);
 
@@ -58,7 +57,7 @@ function YourFunction(data) {
     ttjs.complete();
 
     return true;
-}`
+}
 #Demonstrations
 Demo 1: http://plnkr.co/edit/hBrLJzVmCT7Mi45aIMl1?p=preview
 
