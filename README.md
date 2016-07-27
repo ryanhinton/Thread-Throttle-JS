@@ -1,6 +1,6 @@
 # ThreadThrottleJS
 
-ThreadThrottleJS queues all of your functions for processing and then restrict the flow (throttling) of the simultaneous executions out of the queue.
+ThreadThrottleJS queues all of your functions for processing and then restricts the flow (throttling) of the simultaneous executions out of the queue.
 
 The purpose behind this functionality is to overcome server slowness and/or network slowness which can cause AJAX calls to time out if there are too many processes hitting the server at one time or if the network is slow.
 
