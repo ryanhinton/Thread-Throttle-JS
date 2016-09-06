@@ -1,4 +1,4 @@
-# ThreadThrottleJS
+# Thread Throttle JS
 
 ThreadThrottleJS queues all of your functions for processing and then restricts the flow (throttling) of the simultaneous executions out of the queue.
 
