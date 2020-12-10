@@ -68,4 +68,4 @@ Javascript Thread Throttle JS Asynchronous Async Delay Workers Limiter Limit Fun
 
 =========
 By Ryan Hinton
-© Copyright 2019
+© Copyright 2021
